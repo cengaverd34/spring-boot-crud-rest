@@ -25,7 +25,7 @@ public class MultipleDataSourceConfiguration {
         return DataSourceBuilder.create().build();
     }
 
-    @Bean(name = "maximoDb ")
+    @Bean(name = "maximoDb")
     @ConfigurationProperties(prefix = "spring.seconddatasource")
     public DataSource secondaryDataSource() {
         return DataSourceBuilder.create().build();
