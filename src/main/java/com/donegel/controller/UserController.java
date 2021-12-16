@@ -70,7 +70,7 @@ public class UserController {
     public Map<String, Boolean> deleteUser(
             @PathVariable(value = "id") Long userId) throws ResourceNotFoundException {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceNotFoundException("User not found :: " + userId));
+                .orElseThrow(() -> new ResourceNotFoundException("User not found  for delete:: " + userId));
 
         userRepository.delete(user);
         Map<String, Boolean> response = new HashMap<>();
